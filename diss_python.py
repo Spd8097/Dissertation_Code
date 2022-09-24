@@ -37,7 +37,7 @@ pd.set_option('display.max_columns',11)
 # load data
 schema = 'work_psingh'
 user = 'psingh'
-gp = greenplum.GPConnect(box=2, schema=schema, user=user, dbname='appriss')
+gp = greenplum.GPConnect(box=2, schema=schema, user=user, dbname='abc')
 gp.connect()
 df = pd.read_sql_query(f'SELECT * FROM {schema}.parameters_for_analysis_cln', con=gp)
 gp.close()
